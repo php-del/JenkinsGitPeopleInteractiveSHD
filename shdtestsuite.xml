@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="shdtestsuite">
+<test name="shdmothertoungueverification">
+<classes>
+<class name="Testcases.Testcases_shd_test"></class>
+
+</classes>
+</test>
+</suite>
