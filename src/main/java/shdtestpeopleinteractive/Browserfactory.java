@@ -1,11 +1,16 @@
 package shdtestpeopleinteractive;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class Browserfactory {
-public static WebDriver getInstance() {
+public static WebDriver getInstance() throws MalformedURLException {
 	WebDriver driver=null;
 	
 	switch (Constants.browsername.toUpperCase()) {
@@ -14,8 +19,16 @@ public static WebDriver getInstance() {
 	break;
 	case "FIREFOX": {System.setProperty("webdriver.gecko.driver", Constants.firefoxpath);
 	driver=new FirefoxDriver();}
-		
-		break;
+	break;
+	case "REMOTE" : { DesiredCapabilities caps = new DesiredCapabilities();
+	caps.setCapability("os_version", "Big Sur");
+    caps.setCapability("resolution", "1920x1080");
+    caps.setCapability("browser", "Chrome");
+    caps.setCapability("browser_version", "latest");
+    caps.setCapability("os", "OS X");
+    driver = new RemoteWebDriver(new URL(Constants.URL), caps);
+	}
+	break;
 
 	default:
 		try {

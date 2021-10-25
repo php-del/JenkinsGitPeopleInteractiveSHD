@@ -1,5 +1,6 @@
 package shdtestpeopleinteractive;
 
+import java.net.MalformedURLException;
 import java.util.HashMap;
 
 import org.openqa.selenium.WebDriver;
@@ -10,7 +11,7 @@ public class BaseTest {
 static HashMap<String,WebDriver>  drivermap= new HashMap<String,WebDriver>();
 
 @BeforeMethod
-public void launchbrowser() {
+public void launchbrowser() throws MalformedURLException {
 	WebDriver driver= Browserfactory.getInstance();
 	driver.manage().window().maximize();
 	drivermap.put(Thread.currentThread().getName(), driver);
