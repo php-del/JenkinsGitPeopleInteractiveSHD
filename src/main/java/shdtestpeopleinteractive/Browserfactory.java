@@ -27,6 +27,9 @@ public static WebDriver getInstance() throws MalformedURLException {
     caps.setCapability("browser_version", "latest");
     caps.setCapability("os", "OS X");
     driver = new RemoteWebDriver(new URL(Constants.URL), caps);
+    
+   System.out.println(((RemoteWebDriver) driver).getSessionId());
+    
 	}
 	break;
 
