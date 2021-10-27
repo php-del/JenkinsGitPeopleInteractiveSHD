@@ -11,7 +11,7 @@ public class BaseTest {
 static HashMap<String,WebDriver>  drivermap= new HashMap<String,WebDriver>();
 
 @BeforeMethod
-public void launchbrowser() throws MalformedURLException {
+public void launchbrowser() throws Exception {
 	WebDriver driver= Browserfactory.getInstance();
 	driver.manage().window().maximize();
 	drivermap.put(Thread.currentThread().getName(), driver);

@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.testng.Assert;
 
+import shdtestpeopleinteractive.Excel_Util;
 import shdtestpeopleinteractive.Syncutil;
 
 public class Signuppagemarathishd {
@@ -36,8 +37,9 @@ WebElement nextbtn;
 public static WebElement communitylanverification;
 
 public void switchfrompanel1topanel2() {
-	emailid.sendKeys("ppatharetest1@gmail.com");
-	password.sendKeys("shiv@12356");
+	try {
+	emailid.sendKeys(Excel_Util.readexcelretlist().get(0));
+	password.sendKeys(Excel_Util.readexcelretlist().get(1));
 	createprofiledropdown.click();
 	valuesindropdown.get(0).click();
 	genderselection.click();
@@ -45,6 +47,7 @@ public void switchfrompanel1topanel2() {
 	
 	Syncutil.Explicitwait(nextbtn);
 	nextbtn.click();
+}catch(Exception e) {e.printStackTrace();}
 }
 
 }

@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 
+import shdtestpeopleinteractive.Excel_Util;
 import shdtestpeopleinteractive.Syncutil;
 
 public class Signuppagegujaratishd {
@@ -34,8 +35,9 @@ public class Signuppagegujaratishd {
 	public static WebElement communitylanverification;
 
 	public void switchfrompanel1topanel2() {
-		emailid.sendKeys("ppatharetest1@gmail.com");
-		password.sendKeys("shiv@12356");
+		try {
+		emailid.sendKeys(Excel_Util.readexcelretlist().get(2));
+		password.sendKeys(Excel_Util.readexcelretlist().get(3));
 		createprofiledropdown.click();
 		valuesindropdown.get(0).click();
 		genderselection.click();
@@ -43,6 +45,7 @@ public class Signuppagegujaratishd {
 		
 		Syncutil.Explicitwait(nextbtn);
 		nextbtn.click();
+	}catch(Exception e) {e.printStackTrace();}
 	}
 
 	}

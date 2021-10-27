@@ -1,7 +1,9 @@
 package shdtestpeopleinteractive;
 
+import java.io.FileInputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,14 +12,17 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class Browserfactory {
-public static WebDriver getInstance() throws MalformedURLException {
+public static WebDriver getInstance() throws Exception {
 	WebDriver driver=null;
+	Properties p= new Properties();
+	FileInputStream fs= new FileInputStream("F:\\Eclipse Java new Programs\\shdtestpeopleinteractive\\src\\main\\resources\\framework.properties");
+	p.load(fs);
 	
-	switch (Constants.browsername.toUpperCase()) {
-	case "CHROME": {System.setProperty("webdriver.chrome.driver", Constants.chromepath);
+	switch (p.getProperty("browsername").toUpperCase()) {
+	case "CHROME": {System.setProperty("webdriver.chrome.driver", p.getProperty("chromepath"));
 	driver=new ChromeDriver();}
 	break;
-	case "FIREFOX": {System.setProperty("webdriver.gecko.driver", Constants.firefoxpath);
+	case "FIREFOX": {System.setProperty("webdriver.gecko.driver", p.getProperty("firefoxpath"));
 	driver=new FirefoxDriver();}
 	break;
 	case "REMOTE" : { DesiredCapabilities caps = new DesiredCapabilities();
@@ -27,7 +32,8 @@ public static WebDriver getInstance() throws MalformedURLException {
     caps.setCapability("browser_version", "latest");
     caps.setCapability("os", "OS X");
     caps.setCapability("build", "BStack Build Number 1");
-    driver = new RemoteWebDriver(new URL(Constants.URL), caps);
+    driver = new RemoteWebDriver(new URL(p.getProperty("URL")), caps);
+    //System.out.println(Constants.URL);
     
    System.out.println(((RemoteWebDriver) driver).getSessionId());
     

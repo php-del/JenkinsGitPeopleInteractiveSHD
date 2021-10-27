@@ -5,6 +5,7 @@
     <classes>
       <class name="Testcases.Testcases_shd_test">
         <methods>
+          <include name="mothertongueverificationmarathi"/>
           <include name="mothertongueverificationgujarati"/>
           <include name="launchbrowser"/>
           <include name="quitbrowsersession"/>

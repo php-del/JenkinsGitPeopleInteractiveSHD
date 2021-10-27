@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="shdtestsuite" duration-ms="66547" started-at="2021-10-26T05:12:57Z" finished-at="2021-10-26T05:14:03Z">
+  <suite name="shdtestsuite" duration-ms="109661" started-at="2021-10-27T10:57:09Z" finished-at="2021-10-27T10:58:58Z">
     <groups>
     </groups>
-    <test name="shdmothertoungueverification" duration-ms="66547" started-at="2021-10-26T05:12:57Z" finished-at="2021-10-26T05:14:03Z">
+    <test name="shdmothertoungueverification" duration-ms="109661" started-at="2021-10-27T10:57:09Z" finished-at="2021-10-27T10:58:58Z">
       <class name="Testcases.Testcases_shd_test">
-        <test-method status="PASS" signature="launchbrowser()[pri:0, instance:Testcases.Testcases_shd_test@19d37183]" name="launchbrowser" is-config="true" duration-ms="10146" started-at="2021-10-26T10:42:57Z" finished-at="2021-10-26T10:43:07Z">
+        <test-method status="PASS" signature="launchbrowser()[pri:0, instance:Testcases.Testcases_shd_test@8909f18]" name="launchbrowser" is-config="true" duration-ms="20761" started-at="2021-10-27T16:27:09Z" finished-at="2021-10-27T16:27:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchbrowser -->
-        <test-method status="PASS" signature="mothertongueverificationmarathi()[pri:1, instance:Testcases.Testcases_shd_test@19d37183]" name="mothertongueverificationmarathi" duration-ms="21494" started-at="2021-10-26T10:43:07Z" finished-at="2021-10-26T10:43:29Z">
+        <test-method status="PASS" signature="mothertongueverificationmarathi()[pri:1, instance:Testcases.Testcases_shd_test@8909f18]" name="mothertongueverificationmarathi" duration-ms="27341" started-at="2021-10-27T16:27:29Z" finished-at="2021-10-27T16:27:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mothertongueverificationmarathi -->
-        <test-method status="PASS" signature="quitbrowsersession()[pri:0, instance:Testcases.Testcases_shd_test@19d37183]" name="quitbrowsersession" is-config="true" duration-ms="2179" started-at="2021-10-26T10:43:29Z" finished-at="2021-10-26T10:43:31Z">
+        <test-method status="PASS" signature="quitbrowsersession()[pri:0, instance:Testcases.Testcases_shd_test@8909f18]" name="quitbrowsersession" is-config="true" duration-ms="2528" started-at="2021-10-27T16:27:57Z" finished-at="2021-10-27T16:27:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitbrowsersession -->
-        <test-method status="PASS" signature="launchbrowser()[pri:0, instance:Testcases.Testcases_shd_test@19d37183]" name="launchbrowser" is-config="true" duration-ms="7123" started-at="2021-10-26T10:43:31Z" finished-at="2021-10-26T10:43:38Z">
+        <test-method status="PASS" signature="launchbrowser()[pri:0, instance:Testcases.Testcases_shd_test@8909f18]" name="launchbrowser" is-config="true" duration-ms="22959" started-at="2021-10-27T16:27:59Z" finished-at="2021-10-27T16:28:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchbrowser -->
-        <test-method status="PASS" signature="mothertongueverificationgujarati()[pri:2, instance:Testcases.Testcases_shd_test@19d37183]" name="mothertongueverificationgujarati" duration-ms="23850" started-at="2021-10-26T10:43:38Z" finished-at="2021-10-26T10:44:02Z">
+        <test-method status="PASS" signature="mothertongueverificationgujarati()[pri:2, instance:Testcases.Testcases_shd_test@8909f18]" name="mothertongueverificationgujarati" duration-ms="33596" started-at="2021-10-27T16:28:22Z" finished-at="2021-10-27T16:28:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mothertongueverificationgujarati -->
-        <test-method status="PASS" signature="quitbrowsersession()[pri:0, instance:Testcases.Testcases_shd_test@19d37183]" name="quitbrowsersession" is-config="true" duration-ms="1713" started-at="2021-10-26T10:44:02Z" finished-at="2021-10-26T10:44:03Z">
+        <test-method status="PASS" signature="quitbrowsersession()[pri:0, instance:Testcases.Testcases_shd_test@8909f18]" name="quitbrowsersession" is-config="true" duration-ms="2423" started-at="2021-10-27T16:28:56Z" finished-at="2021-10-27T16:28:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitbrowsersession -->
